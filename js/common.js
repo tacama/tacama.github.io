@@ -130,3 +130,73 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 });
+
+
+
+
+
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   var tagSelect = document.getElementById("tagSelect");
+
+//   tagSelect.addEventListener("change", function() {
+//     var selectedOption = tagSelect.options[tagSelect.selectedIndex];
+//     var url = selectedOption.getAttribute('data-url');
+
+//     if (url) {
+//       localStorage.setItem('selectedTag', this.value); // Save selected value
+//       window.location.href = url; // Redirect to selected URL
+//     }
+//   });
+
+//   // Get the current selected value from localStorage
+//   var selectedValue = localStorage.getItem('selectedTag');
+
+//   // Set the selected value in the dropdown
+//   if (selectedValue) {
+//     tagSelect.value = selectedValue;
+//   } else {
+//     // If no selected value is found, default to "Todas"
+//     tagSelect.value = "all";
+//   }
+// });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var tagSelect = document.getElementById("tagSelect");
+
+  tagSelect.addEventListener("change", function() {
+    var selectedOption = tagSelect.options[tagSelect.selectedIndex];
+    var url = selectedOption.getAttribute('data-url');
+
+    if (url) {
+      localStorage.setItem('selectedTag', this.value); // Save selected value
+      window.location.href = url; // Redirect to selected URL
+    }
+  });
+
+  // Get the current selected value from localStorage
+  var selectedValue = localStorage.getItem('selectedTag');
+
+  // Set the selected value in the dropdown
+  if (selectedValue) {
+    tagSelect.value = selectedValue;
+  } else {
+    // If no selected value is found, default to "all"
+    tagSelect.value = "all";
+  }
+
+  // Add event listeners to your nav menu items
+  var navMenuItems = document.querySelectorAll('.nav-menu-item');
+  navMenuItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+      // Set the selected value to "all"
+      tagSelect.value = "all";
+      // Save the selected value to localStorage
+      localStorage.setItem('selectedTag', 'all');
+    });
+  });
+});
+
+
