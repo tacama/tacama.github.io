@@ -1,0 +1,22 @@
+<!-- Here, try to include a list of all tags 
+https://stackoverflow.com/questions/54769586/how-to-display-tags-in-jekyll-and-get-the-tag-to-click-through-to-all-relevant-c
+-->
+
+{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tags_list = site_tags | split:',' | sort_natural %}
+
+
+<div class="row justify-content-center">
+  <div class="col col-lg-6 col-md-8 col-sm-12">
+
+    <div class="article-tags__box d-flex flex-wrap justify-content-center">
+      {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+      {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}      
+        <a href="{{ site.baseurl }}/tags/?tag={{ this_word | downcase | url_encode }}" class="article__tag">{{ this_word }}<span class="count"> ({{ site.tags[this_word].size }})</span></a>     
+      {% endunless %}{% endfor %}
+    </div>
+
+  </div>
+</div>
+
+

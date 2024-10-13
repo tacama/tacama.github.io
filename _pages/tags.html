@@ -1,0 +1,111 @@
+---
+layout: default
+title: Ideas de regalos
+description: Akio blog features productivity, tips, inspiration and strategies for massive profits. Find out how to set up a successful blog or how to make yours even better!
+permalink: /tags/
+---
+
+
+<!-- here include tags-list, but careful repeted two previous lines of code -->
+
+
+<div class="container">
+
+
+  <div class="page-section-head">
+    <!-- <h1 class="page-title">{% if page.title %}{{ page.title }}{% else %}{{ site.data.settings.blog__settings.blog__title }}{% endif %}</h1> -->
+    <div class="page-title">
+      <h1 class="page-title">{% if page.title %}{{ page.title }}{% else %}{{
+        site.data.settings.blog__settings.blog__title }}{% endif %}</h1>
+      {% include contact-button.html %}
+    </div>
+
+    {% if page.description %}
+    <p class="page-description">{{ page.description }}</p>
+    {% else site.data.settings.blog__settings.blog__description %}
+    <p class="page-description">{{ site.data.settings.blog__settings.blog__description }}</p>
+    {% endif %}
+
+  </div>
+
+  <!-- here include tags list -->
+
+  {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor
+  %}{% endcapture %}
+  {% assign tags_list = site_tags | split:',' | sort_natural %}
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col col-lg-6 col-md-8 mb-4">
+
+        <select class="form-select" id="tagSelect" aria-label="Default select example">
+          <option value="all" data-url="{{ site.baseurl }}/blog/">Todas</option>
+
+          {% for item_ in (0..site.tags.size) %}{% unless forloop.last %}
+          {% capture this_word %}{{ tags_list[item_] | strip_newlines }}{% endcapture %}
+          <option value="{{ this_word | downcase | url_encode }}"
+            data-url="{{ site.baseurl }}/tags/?tag={{ this_word | downcase | url_encode }}">
+            {{ this_word | capitalize }} ({{ site.tags[this_word].size }})
+          </option>
+          {% endunless %}{% endfor %}
+        </select>
+
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+<!-- begin tags -->
+<!-- I'm not sure if the html elements are redundant -->
+
+<div class="container animate">
+  <article class="page">
+    
+    <section class="tags">
+
+      {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+      {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
+    
+      <div class="tags__inner is-hidden" id="{{ this_word | cgi_escape }}">
+    
+        <section>
+          <div class="text-center container py-5">
+            <div class="row">
+              {% for post in site.tags[this_word] %}
+              {% if post.title != null %}
+              {% include article-cards.html %}
+              {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </section>
+    
+      </div>
+    
+      {% endunless %}
+      {% endfor %}
+    
+    </section>
+
+  </article>
+</div>
+
+
+<!-- end tags -->
+
+
+
+
+
+
+<script>
+  var tag_name = window.location.search.replace("?tag=", "#");
+  if (tag_name) {
+    var el = document.querySelector(tag_name);
+    el.classList.remove("is-hidden");
+  }
+</script>
