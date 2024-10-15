@@ -37,7 +37,7 @@
   color: var(--heading-font-color);
 
   @media (max-width: $wide) {
-    font-size: 48px;
+    font-size: 38px; // originally set at 48
   }
 
   @media (max-width: $mobile) {
