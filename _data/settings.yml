@@ -56,7 +56,8 @@ social:
 hero:
   enable: true
   hero__title: Hola, soy Julio Ramirez
-  hero__description: Me ocupo del área creativa en <strong>Tacama</strong>, donde diseño y fabrico nuestros productos. Tengo más de 15 años de experiencia trabajando con una amplia gama de materiales, lo que me ha dado una gran habilidad para crear productos de cuero, tela, hierro, madera, entre otros. <strong style="color:var(--primary-color);">Crear para mi es una pasión.</strong>
+  hero__description: Hola, soy Julio Ramírez y me encargo del área creativa en Tacama, donde diseño y fabrico nuestros productos. Tengo más de 15 años de experiencia trabajando con una amplia gama de materiales, lo que me ha dado una gran habilidad para crear productos con cuero, tela, hierro, madera, entre otros. Crear para mi es una pasión. <br> ¿Te gustaría ver mis creaciones o hacer un pedido personalizado? Explora mis áreas de trabajo o contáctame directamente. ¡Estoy aquí para ayudarte a encontrar lo que necesitas!</br>
+
   hero__image: "/images/01-1.jpg"
 
 
@@ -154,9 +155,10 @@ footer__background__image: "/images/bg.jpg"
 # Contact Settings
 contact:
   email: xyyqbqew # Add your form_id
-  description: Para encargos personalizados relacionados con mis áreas de trabajo en madera, cuero y hierro, les invito a ponerse en contacto conmigo a través del siguiente formulario.
+  description: Para encargos relacionados con mis áreas de trabajo os invito a contactarme a través del siguiente formulario. ¡Estoy aquí para ayudarte a encontrar lo que necesitas!
 
-# NOTE
+
+
 # Akio theme comes with a contact form built-in. You can use this form with Formspree (https://formspree.io/) service and get up to 50 submissions for free. Also, you can easily switch to another service if you want.
 
 
