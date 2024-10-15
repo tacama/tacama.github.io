@@ -2,7 +2,7 @@
 # Site Settings
 title: Tacama
 logo: '/images/logo-tacama.svg' # You can add own logo. For example '/images/logo.png'.
-description: Creative Portfolio Theme for Jekyll.
+description: Tacama Art - by Julio Ramírez.
 color_scheme: auto # You can choose three modes auto, light, and dark. By default, the auto mode is set, which means the user can choose the light or dark mode themself.
 
 
