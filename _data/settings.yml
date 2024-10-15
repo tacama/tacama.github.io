@@ -12,8 +12,8 @@ menu__settings:
   menu__items:
     - title: 'Inicio'
       url: '/'
-    # - title: 'Áreas de trabajo'
-    #   url: '/work/'
+    - title: 'Áreas de trabajo'
+      url: '/work/'
     # - title: 'Ideas de regalos'
     #   url: '/blog/'
     # - title: 'Quién soy'
@@ -36,7 +36,7 @@ menu__settings:
 # Author Settings
 author:
   author__name: Julio Ramirez
-  author__bio: Hola, soy Julio – Graphic Designer. I'm a creative and curious person who has a lot of experience and fond moments working with design, websites, and marketing.
+  author__bio: Hola, soy Julio Ramírez y me ocupo del área creativa en Tacama, donde diseño y fabrico nuestros productos.
   author__avatar: '/images/01.jpg'
 
 social:
@@ -55,8 +55,8 @@ social:
 # Hero Settings
 hero:
   enable: true
-  hero__title: Hola a todos, soy Julio Ramirez
-  hero__description: Hola, soy Julio Ramírez y me ocupo del área creativa en <strong>Tacama</strong>, donde diseño y fabrico nuestros productos. Tengo más de 15 años de experiencia trabajando con una amplia gama de materiales, lo que me ha dado una gran habilidad para crear productos de cuero, tela, hierro, madera, entre otros. <strong style="color:var(--primary-color);">Crear para mi es una pasión.</strong>
+  hero__title: Hola, soy Julio Ramirez
+  hero__description: Me ocupo del área creativa en <strong>Tacama</strong>, donde diseño y fabrico nuestros productos. Tengo más de 15 años de experiencia trabajando con una amplia gama de materiales, lo que me ha dado una gran habilidad para crear productos de cuero, tela, hierro, madera, entre otros. <strong style="color:var(--primary-color);">Crear para mi es una pasión.</strong>
   hero__image: "/images/01-1.jpg"
 
 
