@@ -7,13 +7,31 @@
         <div class="logo">
           <a class="logo__link" href="{{ site.baseurl }}/">
           {% if site.data.settings.logo %}
-            <img id="logo" class="logo__image" src="{{ site.baseurl }}{{ site.data.settings.logo }}" alt="{{ site.data.settings.title }}">
+          <!-- <img id="logo" class="logo__image" src="{{ site.baseurl }}{{ site.data.settings.logo }}" alt="{{ site.data.settings.title }}">      -->
+          <div class="svg-image-container" id="logo-container"></div>
           {% else %}
             {{ site.data.settings.title }}
           {% endif %}
           </a>
         </div>
+        
 
+        <script>
+          fetch('{{ site.baseurl }}{{ site.data.settings.logo }}')
+            .then(response => response.text())
+            .then(svg => {
+              const logoContainer = document.getElementById('logo-container');
+              
+              // Inject the SVG into the container
+              logoContainer.innerHTML = svg;
+        
+              // Apply the ID and class to the injected SVG element
+              const svgElement = logoContainer.querySelector('svg');
+              svgElement.setAttribute('id', 'logo');          // Assign the ID
+              svgElement.classList.add('logo__image');        // Assign the class
+            });
+        </script>
+        
         <nav class="main-nav nav-menu-item">
           <div class="main-nav__box">
             <ul class="nav__list list-reset">
