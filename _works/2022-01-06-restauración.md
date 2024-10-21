@@ -1,6 +1,6 @@
 ---
 title: Restauración
-description: An alternative to paperback is the glossy cover, otherwise known as a dust cover, found on magazines, and comic books.
+description: Doy nueva vida a objetos antiguos o dañados, restaurando muebles, piezas de cuero, o metales con técnicas que preservan su esencia original.
 category: 
 date: 2022-01-06 08:01:35 +0300
 client: Club Presents
