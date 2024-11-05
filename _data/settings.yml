@@ -3,7 +3,7 @@
 title: Tacama
 logo: '/images/logo-tacama.svg' # You can add own logo. For example '/images/logo.png'.
 description: Tacama Art - by Julio Ramírez.
-color_scheme: auto # You can choose three modes auto, light, and dark. By default, the auto mode is set, which means the user can choose the light or dark mode themself.
+color_scheme: light # You can choose three modes auto, light, and dark. By default, the auto mode is set, which means the user can choose the light or dark mode themself.
 
 
 #-------------------------------
@@ -35,9 +35,9 @@ menu__settings:
 #-------------------------------
 # Author Settings
 author:
-  author__name: Julio Ramírez
-  author__bio: Hola, soy Julio Ramírez y me ocupo del área creativa en Tacama, donde diseño y fabrico nuestros productos.
-  author__avatar: '/images/01.jpg'
+  author__name: Tacama
+  author__bio: Pasión en cada creación.
+  author__avatar: #'/images/01.jpg'
 
 social:
 # - {icon: "ion-logo-twitter", link: "https://twitter.com"}
@@ -55,9 +55,9 @@ social:
 # Hero Settings
 hero:
   enable: true
-  hero__title: Hola, soy Julio&nbspRamírez
-  hero__description: Me encargo del área creativa en Tacama, donde diseño y fabrico nuestros productos. Tengo más de 15 años de experiencia trabajando con una amplia gama de materiales, lo que me ha dado una gran habilidad para crear productos con cuero, tela, hierro, madera, entre otros. Crear para mi es una pasión.
-  hero__callofaction: <strong style="color:var(--primary-color);">¿Te gustaría hacer un pedido?</strong> Explora mis áreas de trabajo o contáctame directamente. ¡Estoy aquí para ayudarte a encontrar lo que necesitas!</br>
+  hero__title: Hola, somos&nbspTacama
+  hero__description: Un pequeño emprendimiento familiar, donde diseñamos  y fabricamos nuestros productos. Tenemos muchos años de experiencia trabajando con una amplia gama de materiales, lo que nos ha dado una gran habilidad para crear productos con cuero, tela, hierro, madera, entre otros. Crear para nosotros es una pasión.
+  hero__callofaction: <strong style="color:var(--primary-color);">¿Te gustaría hacer un pedido?</strong> Explora nuestras áreas de trabajo o contáctanos directamente. ¡Estamos aquí para ayudarte a encontrar lo que necesitas!
 
   hero__image: "/images/01-1.jpg"
 
@@ -106,8 +106,8 @@ mailchimp:
 # Work Settings
 work:
   enable: true
-  work__title: Mis áreas de trabajo
-  work__description: Puedes ver mis principales áreas de trabajo.
+  work__title: Nuestras áreas de trabajo
+  work__description: Puedes ver nuestras principales áreas.
 
 #-------------------------------
 # Testimonials Section
@@ -155,7 +155,7 @@ footer__background__image: "/images/bg.jpg"
 # Contact Settings
 contact:
   email: xyyqbqew # Add your form_id
-  description: Para encargos relacionados con mis áreas de trabajo os invito a contactarme a través del siguiente formulario. ¡Estoy aquí para ayudarte a encontrar lo que necesitas!
+  description: Para encargos relacionados con nuestas áreas de trabajo os invito a contactarnos a través del siguiente formulario. ¡Estamos aquí para ayudarte a encontrar lo que necesitas!
 
 
 
